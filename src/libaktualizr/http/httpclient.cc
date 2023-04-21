@@ -66,8 +66,8 @@ HttpClient::HttpClient(const std::vector<std::string>* extra_headers) {
   headers = nullptr;
 
   curlEasySetoptWrapper(curl, CURLOPT_NOSIGNAL, 1L);
-  curlEasySetoptWrapper(curl, CURLOPT_TIMEOUT, 60L);
-  curlEasySetoptWrapper(curl, CURLOPT_CONNECTTIMEOUT, 60L);
+  curlEasySetoptWrapper(curl, CURLOPT_TIMEOUT, 1800L);
+  curlEasySetoptWrapper(curl, CURLOPT_CONNECTTIMEOUT, 1800L);
   curlEasySetoptWrapper(curl, CURLOPT_CAPATH, Utils::getCaPath());
 
   curlEasySetoptWrapper(curl, CURLOPT_FOLLOWLOCATION, 1L);
